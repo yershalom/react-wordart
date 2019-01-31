@@ -186,7 +186,7 @@
   text-shadow: 0.01em 0em 0 #161616, 0em 0.01em 0 #8d8d8d, 0.02em 0.01em 0 #161616, 0.01em 0.02em 0 #8d8d8d, 0.03em 0.02em 0 #161616, 0.02em 0.03em 0 #8d8d8d, 0.04em 0.03em 0 #161616, 0.03em 0.04em 0 #8d8d8d, 0.05em 0.04em 0 #161616, 0.04em 0.05em 0 #8d8d8d, 0.06em 0.05em 0 #161616, 0.05em 0.06em 0 #8d8d8d, 0.07em 0.06em 0 #161616, 0.06em 0.07em 0 #8d8d8d, 0.08em 0.07em 0 #161616, 0.07em 0.08em 0 #8d8d8d, 0.09em 0.08em 0 #161616, 0.08em 0.09em 0 #8d8d8d, 0.1em 0.09em 0 #161616, 0.09em 0.1em 0 #8d8d8d;
 }
 
-.wordart.italic-outline {
+.wordart.italicOutline {
   transform: scale(1, 1.3);
   -webkit-transform: scale(1, 1.3);
   -moz-transform: scale(1, 1.3);
@@ -194,7 +194,7 @@
   -ms-transform: scale(1, 1.3);
 }
 
-.wordart.italic-outline .text {
+.wordart.italicOutline .text {
   letter-spacing: -0.01em;
   font-family: Arial, sans-serif;
   font-weight: bold;
