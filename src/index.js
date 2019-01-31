@@ -30,7 +30,7 @@ const WordArt = ({ text, theme, fontSize }) => {
 
 WordArt.propTypes = {
   text: PropTypes.string.isRequired,
-  theme: PropTypes.string,
+  theme: PropTypes.oneOf(Object.keys(themes)),
   fontSize: PropTypes.number
 }
 
@@ -38,5 +38,7 @@ WordArt.defaultProps = {
   theme: 'rainbow',
   fontSize: 50
 }
+
+WordArt.themes = Object.keys(themes)
 
 export default WordArt

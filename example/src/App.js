@@ -4,10 +4,6 @@ import WordArt from 'react-wordart'
 
 export default class App extends Component {
   render () {
-    return (
-      <div>
-        <WordArt text='I Love WordArt' />
-      </div>
-    )
+    return WordArt.themes.map(theme => <div style={{padding: 30}} key={theme}><WordArt text={theme} theme={theme} /></div>)
   }
 }
