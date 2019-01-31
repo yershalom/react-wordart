@@ -32,7 +32,7 @@ Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
 `text`|string|yes||
 `theme`|string|no|`rainbow`| WordArt theme.
-`duration`|number|no|`50`|
+`fontSize`|number|no|`50`|
 -----
 
 ## License
