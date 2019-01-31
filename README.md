@@ -15,16 +15,25 @@ npm install --save react-wordart
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-wordart'
+import WordArt from 'react-wordart'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <WordArt text='I Love WordArt' theme={`rainbow`} fontSize={100} />
     )
   }
 }
 ```
+
+### Properties
+
+Property | Type | Required | Default value | Description
+:--- | :--- | :--- | :--- | :---
+`text`|string|yes||
+`theme`|string|no|`rainbow`| WordArt theme.
+`duration`|number|no|`50`|
+-----
 
 ## License
 

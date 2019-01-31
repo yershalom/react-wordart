@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import WordArt from './'
 
-describe('ExampleComponent', () => {
+describe('WordArt', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(WordArt).toBeTruthy()
   })
 })

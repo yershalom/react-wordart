@@ -1,22 +1,42 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-
+import classNames from 'classnames/bind'
 import styles from './styles.css'
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
+const themes = {
+  rainbow: 'rainbow',
+  blues: 'blues',
+  superhero: 'superhero',
+  radial: 'radial',
+  tilt: 'tilt',
+  purple: 'purple',
+  horizon: 'horizon',
+  italicOutline: 'italicOutline',
+  slate: 'slate'
 }
+
+const cx = classNames.bind(styles)
+
+const WordArt = ({ text, theme, fontSize }) => {
+  const th = themes[theme]
+  const className = cx('wordart', th)
+
+  return (
+    <div className={className} style={{fontSize}} >
+      <span className={styles.text}>{text}</span>
+    </div>
+  )
+}
+
+WordArt.propTypes = {
+  text: PropTypes.string.isRequired,
+  theme: PropTypes.string,
+  fontSize: PropTypes.number
+}
+
+WordArt.defaultProps = {
+  theme: 'rainbow',
+  fontSize: 50
+}
+
+export default WordArt
