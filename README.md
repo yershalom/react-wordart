@@ -1,4 +1,4 @@
-# react-wordart
+# react-wordart ([demo](https://yershalom.github.io/react-wordart/))
 
 > The nostalgic WordArt we know just in react
 
@@ -38,3 +38,5 @@ Property | Type | Required | Default value | Description
 ## License
 
 MIT © [yershalom](https://github.com/yershalom)
+
+This module was bootstrapped with [create-react-library](https://github.com/transitive-bullshit/create-react-library).
