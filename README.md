@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/react-wordart.svg)](https://www.npmjs.com/package/react-wordart) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.org/yershalom/react-wordart.svg?branch=master)](https://travis-ci.org/yershalom/react-wordart)
 
+### Css
+
+Based on my [css-wordart](https://github.com/yershalom/css-wordart) repo
+
 ## Install
 
 ```bash
@@ -36,7 +40,7 @@ Property | Type | Required | Default value | Description
 
 ### Available Themes
 Theme | Output
-:--- | :--- 
+:--- | :---
 `rainbow` | ![screen shot 2019-01-31 at 18 19 05](https://user-images.githubusercontent.com/16322616/52068180-d7539280-2584-11e9-990e-c8c1d4fb3011.png)
 `blues` | ![screen shot 2019-01-31 at 18 19 09](https://user-images.githubusercontent.com/16322616/52068181-d7539280-2584-11e9-9087-aefefb0003a7.png)
 `superhero` | ![screen shot 2019-01-31 at 18 19 14](https://user-images.githubusercontent.com/16322616/52068182-d7539280-2584-11e9-82e8-2e934bf4fb28.png)
