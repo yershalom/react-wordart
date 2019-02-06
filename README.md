@@ -1,6 +1,6 @@
 # react-wordart ([demo](https://yershalom.github.io/react-wordart/))
 
-> The nostalgic WordArt we know just in react
+> The nostalgic WordArt we know just in react - [Hackernoon Post](https://hackernoon.com/when-dev-gets-nostalgic-17901c4f703f)
 
 [![NPM](https://img.shields.io/npm/v/react-wordart.svg)](https://www.npmjs.com/package/react-wordart) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.org/yershalom/react-wordart.svg?branch=master)](https://travis-ci.org/yershalom/react-wordart)
 
