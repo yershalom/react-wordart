@@ -5,7 +5,7 @@ import WordArt from 'react-wordart'
 export default class App extends Component {
   render() {
     return (
-      <div contenteditable>
+      <div contentEditable>
         <a
           className='github-button'
           href='https://github.com/yershalom/react-wordart'
