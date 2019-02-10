@@ -15,12 +15,12 @@ npm install --save react-chuck
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-chuck'
+import Chuck from 'react-chuck'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <Chuck />
     )
   }
 }
