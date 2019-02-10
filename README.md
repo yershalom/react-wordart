@@ -1,13 +1,17 @@
-# react-chuck
+# react-wordart ([demo](https://yershalom.github.io/react-wordart/))
 
-> Random Chuck Norris jokes for react
+> The nostalgic WordArt we know just in react - [Hackernoon Post](https://hackernoon.com/when-dev-gets-nostalgic-17901c4f703f)
 
-[![NPM](https://img.shields.io/npm/v/react-chuck.svg)](https://www.npmjs.com/package/react-chuck) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-wordart.svg)](https://www.npmjs.com/package/react-wordart) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.org/yershalom/react-wordart.svg?branch=master)](https://travis-ci.org/yershalom/react-wordart)
+
+## css-wordart
+
+Based on my [css-wordart](https://github.com/yershalom/css-wordart) repo
 
 ## Install
 
 ```bash
-npm install --save react-chuck
+npm install --save react-wordart
 ```
 
 ## Usage
@@ -15,17 +19,63 @@ npm install --save react-chuck
 ```jsx
 import React, { Component } from 'react'
 
-import Chuck from 'react-chuck'
+import WordArt from 'react-wordart'
 
 class Example extends Component {
   render () {
     return (
-      <Chuck />
+      <WordArt text='I Love WordArt' theme={`rainbow`} fontSize={100} />
     )
   }
 }
 ```
 
+### Properties
+
+Property | Type | Required | Default value | Description
+:--- | :--- | :--- | :--- | :---
+`text`|string|yes||
+`theme`|string|no|`rainbow`| WordArt theme.
+`fontSize`|number|no|`50`|
+
+### Available Themes
+Theme | Output
+:--- | :---
+`rainbow` | ![screen shot 2019-01-31 at 18 19 05](https://user-images.githubusercontent.com/16322616/52068180-d7539280-2584-11e9-990e-c8c1d4fb3011.png)
+`blues` | ![screen shot 2019-01-31 at 18 19 09](https://user-images.githubusercontent.com/16322616/52068181-d7539280-2584-11e9-9087-aefefb0003a7.png)
+`superhero` | ![screen shot 2019-01-31 at 18 19 14](https://user-images.githubusercontent.com/16322616/52068182-d7539280-2584-11e9-82e8-2e934bf4fb28.png)
+`radial` | ![screen shot 2019-01-31 at 18 19 18](https://user-images.githubusercontent.com/16322616/52068184-d7ec2900-2584-11e9-8c5e-1c23d1a8cfbf.png)
+`tilt` | ![screen shot 2019-01-31 at 18 19 21](https://user-images.githubusercontent.com/16322616/52068185-d7ec2900-2584-11e9-8f54-d63eb504496a.png)
+`purple` | ![screen shot 2019-01-31 at 18 19 24](https://user-images.githubusercontent.com/16322616/52068186-d7ec2900-2584-11e9-9812-e73f9f2e00e4.png)
+`horizon` | ![screen shot 2019-01-31 at 18 19 27](https://user-images.githubusercontent.com/16322616/52068187-d7ec2900-2584-11e9-9575-e85c3f8259e2.png)
+`italicOutline` | ![screen shot 2019-01-31 at 18 19 31](https://user-images.githubusercontent.com/16322616/52068188-d884bf80-2584-11e9-814b-56b9d6df1251.png)
+`slate` | ![screen shot 2019-01-31 at 18 19 34](https://user-images.githubusercontent.com/16322616/52068189-d884bf80-2584-11e9-9e3c-572aec718ab1.png)
+
+-----
+
+## Development
+
+Local development is broken into two parts (ideally using two tabs).
+
+First, run rollup to watch your `src/` module and automatically recompile it into `dist/` whenever you make changes.
+
+```bash
+npm start # runs rollup with watch flag
+```
+
+The second part will be running the `example/` create-react-app that's linked to the local version of your module.
+
+```bash
+# (in another tab)
+cd example
+npm start # runs create-react-app dev server
+```
+
+Now, anytime you make a change to your library in `src/` or to the example app's `example/src`, `create-react-app` will live-reload your local dev server so you can iterate on your component in real-time.
+
+
 ## License
 
 MIT © [yershalom](https://github.com/yershalom)
+
+This module was bootstrapped with [create-react-library](https://github.com/transitive-bullshit/create-react-library).

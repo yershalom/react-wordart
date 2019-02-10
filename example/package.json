@@ -1,6 +1,6 @@
 {
-  "name": "react-chuck-example",
-  "homepage": "https://yershalom.github.io/react-chuck",
+  "name": "react-wordart-example",
+  "homepage": "https://yershalom.github.io/react-wordart",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -9,7 +9,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
-    "react-chuck": "file:.."
+    "react-wordart": "file:.."
   },
   "scripts": {
     "start": "react-scripts start",

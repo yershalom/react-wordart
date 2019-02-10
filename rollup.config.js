@@ -1,6 +1,5 @@
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
-import json from 'rollup-plugin-json'
 import external from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
@@ -23,14 +22,12 @@ export default {
       sourcemap: true
     }
   ],
-  external: ['axios'],
   plugins: [
     external(),
     postcss({
       modules: true
     }),
     url(),
-    json(),
     svgr(),
     babel({
       exclude: 'node_modules/**',

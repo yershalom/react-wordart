@@ -1,27 +1,44 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames/bind'
+import styles from 'css-wordart'
 
-class Chuck extends Component {
-  state = {
-    data: {}
-  }
-
-  componentDidMount() {
-    this.getChuck()
-  }
-
-  getChuck = async () => {
-    const { data } = await axios.get('https://api.chucknorris.io/jokes/random')
-    this.setState({ data })
-  }
-
-  render() {
-    return (
-      <div>
-        {Object.keys(this.state.data).length > 0 ? <span>{this.state.data['value']}</span> : null}
-      </div>
-    )
-  }
+const themes = {
+  rainbow: 'rainbow',
+  blues: 'blues',
+  superhero: 'superhero',
+  radial: 'radial',
+  tilt: 'tilt',
+  purple: 'purple',
+  horizon: 'horizon',
+  italicOutline: 'italicOutline',
+  slate: 'slate'
 }
 
-export default Chuck
+const cx = classNames.bind(styles)
+
+const WordArt = ({ text, theme, fontSize }) => {
+  const th = themes[theme]
+  const className = cx('wordart', th)
+
+  return (
+    <div className={className} style={{fontSize}} >
+      <span className={styles.text}>{text}</span>
+    </div>
+  )
+}
+
+WordArt.propTypes = {
+  text: PropTypes.string.isRequired,
+  theme: PropTypes.oneOf(Object.keys(themes)),
+  fontSize: PropTypes.number
+}
+
+WordArt.defaultProps = {
+  theme: 'rainbow',
+  fontSize: 50
+}
+
+WordArt.themes = Object.keys(themes)
+
+export default WordArt
