@@ -1,22 +1,27 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import axios from 'axios'
 
-import styles from './styles.css'
+class Chuck extends Component {
+  state = {
+    data: {}
+  }
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
+  componentDidMount() {
+    this.getChuck()
+  }
+
+  getChuck = async () => {
+    const { data } = await axios.get('https://api.chucknorris.io/jokes/random')
+    this.setState({ data })
   }
 
   render() {
-    const {
-      text
-    } = this.props
-
     return (
-      <div className={styles.test}>
-        Example Component: {text}
+      <div>
+        {Object.keys(this.state.data).length > 0 ? <span>{this.state.data['value']}</span> : null}
       </div>
     )
   }
 }
+
+export default Chuck

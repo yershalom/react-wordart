@@ -1,7 +1,10 @@
 {
   "presets": [
     ["env", {
-      "modules": false
+      "modules": false,
+      "targets": {
+        "node": "current"
+      }
     }],
     "stage-0",
     "react"
