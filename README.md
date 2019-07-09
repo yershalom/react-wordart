@@ -4,8 +4,6 @@
 
 [![NPM](https://img.shields.io/npm/v/react-wordart.svg)](https://www.npmjs.com/package/react-wordart) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.org/yershalom/react-wordart.svg?branch=master)](https://travis-ci.org/yershalom/react-wordart)
 
-![Langauge](https://badge.langauge.io/yershalom/react-wordart)
-
 ## css-wordart
 
 Based on my [css-wordart](https://github.com/yershalom/css-wordart) repo
