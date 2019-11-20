@@ -43,7 +43,9 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@yershalom'
-      - run: npm ci
-      - run: npm publish
+      - run: |
+          echo @yershalom:registry=https://npm.pkg.github.com/ >> .npmrc
+          npm ci
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN_PACKAGES}}
