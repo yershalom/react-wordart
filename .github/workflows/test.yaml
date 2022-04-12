@@ -3,17 +3,35 @@ name: TEST
 on:
   workflow_dispatch:
     inputs:
-      test:
+      build_staging:
         required: false
-        type: string
+        type: boolean
         description: Build webapp Docker images
-        default: '["shalom", "yafyuf"]'
+        default: false
 
 jobs:
+  build-matrix:
+    runs-on: ubuntu-latest
+    steps:
+      - id: set-matrix
+        run: |
+          if $BUILD_STAGING ; then
+            echo '::set-output name=service_name::["frontend"]'
+          else
+            echo '::set-output name=service_name::["frontend", "backend"]'
+          fi
+        env:
+          BUILD_STAGING: ${{ inputs.build_staging }}
+    outputs:
+      service_name: ${{ steps.set-matrix.outputs.service_name }}
   build:
+    needs: build-matrix
+    strategy:
+        matrix:
+          service_name: ${{fromJson(needs.build-matrix.outputs.service_name)}}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: test echo
+    - name: test echo ${{ matrix.service_name }}
       run: |
-        echo ${{ toJson(github.event.inputs.test) }}
+        echo ${{ matrix.service_name }}
