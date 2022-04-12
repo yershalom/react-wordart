@@ -16,4 +16,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: test echo
       run: |
-        echo ${{ toJson(github.event.inputs.test }})
+        echo ${{ toJson(github.event.inputs.test) }}
