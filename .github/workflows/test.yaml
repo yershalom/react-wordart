@@ -1,0 +1,13 @@
+name: TEST
+
+on:
+  workflow_dispatch:
+    inputs:
+      test:
+        required: false
+        type: string
+        description: Build webapp Docker images
+        default: '["shalom", "yafyuf"]'
+jobs:
+  echo:
+    run: echo toJson(${{ github.event.inputs.test }})
