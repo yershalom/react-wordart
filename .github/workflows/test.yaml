@@ -21,7 +21,7 @@ jobs:
             echo '::set-output name=service_name::["frontend", "backend"]'
           fi
         env:
-          BUILD_STAGING: ${{ inputs.build_staging }}
+          BUILD_STAGING: ${{ github.event.inputs.build_staging }}
     outputs:
       service_name: ${{ steps.set-matrix.outputs.service_name }}
   build:
