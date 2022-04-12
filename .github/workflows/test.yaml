@@ -8,6 +8,12 @@ on:
         type: string
         description: Build webapp Docker images
         default: '["shalom", "yafyuf"]'
+
 jobs:
-  echo:
-    run: echo toJson(${{ github.event.inputs.test }})
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: test echo
+      run: |
+        echo toJson(${{ github.event.inputs.test }})
